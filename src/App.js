@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'antd/dist/antd.css'
 import './App.css';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route
+  } from "react-router-dom";
+import PhoneOTPAuth from './phone-otp-auth';
+import Main from './Main'
+import SuccessOTP from './success-otp';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {	  
+	
+	render(){
+		return(
+			<Router>
+				<div>
+				<Switch>
+					<Route path="/otp-auth">
+						<PhoneOTPAuth />
+					</Route>
+					<Route path="/success-otp">
+						<SuccessOTP />
+					</Route>
+					<Route path="/">
+						<Main />
+					</Route>
+					
+				</Switch>
+				</div>
+			</Router>
+		);
+	}
 }
-
 export default App;
+
+
