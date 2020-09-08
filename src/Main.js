@@ -81,7 +81,7 @@ class Main extends React.Component {
             <Row >
                 <Col  span={12} offset={6}>
                 <Button danger style={{width:"100%"}} type="primary" htmlType="submit" onClick={this.submitPhoneNumberAuth}>
-                <PhoneOutlined /> SIGN IN USING FIREBASE ACCOUNT
+                <PhoneOutlined /> SIGN IN USING Your PHONE NUMBER
 			    </Button>
                 </Col>
             </Row>
